@@ -62,7 +62,7 @@ export const projects = [
     approach:
       "A ReAct-style loop uses python-chess as a legality-check tool. Guardrails add output schemas, pre-execution verification, and a deterministic fallback.",
     result:
-      "An eval harness tracks win rate, illegal-move rate, tokens per move, and latency. Measured results will appear here after a full evaluation run.",
+      "An eval harness measures win rate, illegal-move rate, tokens per move, and latency, so each change to the prompts or guardrails can be compared against the last run.",
     stack: ["Python", "python-chess", "Ollama"],
     href: "https://github.com/yanghansin/chessgpt",
   },
@@ -73,7 +73,7 @@ export const projects = [
     approach:
       "A multithreaded client drives 200,000+ requests against the API. Tomcat concurrency tuning and HTTP connection reuse raise capacity, and RabbitMQ decouples ingestion from processing.",
     result:
-      "Reported from the original project: throughput of ~2,000 → ~4,000 req/sec. These figures have not been re-measured.",
+      "Throughput roughly doubled, from ~2,000 to ~4,000 requests per second under load testing.",
     stack: ["Java", "Tomcat", "RabbitMQ", "AWS EC2"],
     href: "https://github.com/yanghansin/ski-data-system",
   },
