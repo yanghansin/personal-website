@@ -1,4 +1,5 @@
 import { about, contact, education, experience, projects, site, skills } from "@/data/content";
+import { SectionNav } from "@/components/section-nav";
 
 const nav = [
   { href: "#about", label: "About" },
@@ -16,7 +17,11 @@ function Section({
   children,
 }: Readonly<{ id: string; title: string; children: React.ReactNode }>) {
   return (
-    <section id={id} aria-labelledby={`${id}-title`} className="border-line border-t py-16">
+    <section
+      id={id}
+      aria-labelledby={`${id}-title`}
+      className="border-line scroll-mt-12 border-t py-16"
+    >
       <h2 id={`${id}-title`} className="mb-8 text-2xl font-semibold tracking-tight">
         {title}
       </h2>
@@ -30,23 +35,15 @@ export default function Home() {
     <>
       <a
         href="#main"
-        className="focus:bg-panel sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:px-4 focus:py-2"
+        className="focus:bg-panel sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-20 focus:px-4 focus:py-2"
       >
         Skip to content
       </a>
 
-      <header className="mx-auto max-w-3xl px-6 pt-6">
-        <nav aria-label="Primary">
-          <ul className="text-muted flex flex-wrap gap-x-5 gap-y-2 text-sm">
-            {nav.map((item) => (
-              <li key={item.href}>
-                <a href={item.href} className="hover:text-amber">
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+      <header className="border-line bg-ink/85 sticky top-0 z-10 border-b backdrop-blur">
+        <div className="mx-auto max-w-3xl px-6 py-4">
+          <SectionNav items={nav} />
+        </div>
       </header>
 
       <main id="main" className="mx-auto max-w-3xl px-6">
