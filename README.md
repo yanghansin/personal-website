@@ -36,7 +36,7 @@ The site is built and ready to deploy, but it isn't deployed yet.
 
 TODO:
 
-- Add the resume at `public/resume.pdf`. The **Download resume** button returns a 404 until then.
+- Add the resume at `public/resume.pdf`. The **Download resume** button stays hidden until then and appears on the next build.
 - Deploy to Vercel. The default Next.js settings work with no extra configuration.
 
 ## Roadmap

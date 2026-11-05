@@ -1,4 +1,9 @@
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import { about, contact, education, experience, projects, site, skills } from "@/data/content";
+
+// The page is rendered at build time, so the button appears once the PDF is added to public/.
+const hasResume = existsSync(join(process.cwd(), "public", contact.resumeHref));
 
 const nav = [
   { href: "#about", label: "About" },
@@ -164,12 +169,14 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          <a
-            href={contact.resumeHref}
-            className="bg-amber text-ink mt-8 inline-block rounded-md px-5 py-2.5 font-medium hover:opacity-90"
-          >
-            Download resume
-          </a>
+          {hasResume && (
+            <a
+              href={contact.resumeHref}
+              className="bg-amber text-ink mt-8 inline-block rounded-md px-5 py-2.5 font-medium hover:opacity-90"
+            >
+              Download resume
+            </a>
+          )}
         </Section>
       </main>
 

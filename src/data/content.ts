@@ -111,6 +111,6 @@ export const contact = {
     },
     { label: "GitHub", value: "github.com/yanghansin", href: "https://github.com/yanghansin" },
   ],
-  // TODO: add the PDF at public/resume.pdf. This link returns 404 until then.
+  // The Download resume button is hidden until this file exists in public/.
   resumeHref: "/resume.pdf",
 };
