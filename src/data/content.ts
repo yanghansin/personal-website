@@ -1,6 +1,8 @@
 // All site copy lives here. Edit this file to change text; no component changes needed.
 
-export const site = {
+import type { Contact, Education, Job, Project, Site, SkillGroup } from "./types";
+
+export const site: Site = {
   name: "Han Yang",
   alias: "Flying Fox",
   tagline: "Recent M.S. CS grad building AI agents and distributed systems.",
@@ -9,13 +11,13 @@ export const site = {
     "Han Yang (Flying Fox) is a recent M.S. CS graduate building AI agents and distributed systems.",
 };
 
-export const about = [
+export const about: string[] = [
   "I'm Han Yang, also known as Flying Fox. I studied mathematics and statistics at Purdue, then finished an M.S. in Computer Science at Northeastern University in Seattle in May 2026.",
   "My internships put that training to work on concrete problems: using LLMs to parse immigration forms at QuickImmi, and working out where EV charging stations should go at Puget Sound Energy.",
   "My projects sit in the same two areas: a chess agent whose moves are verified before they are played, and a ski-lift event pipeline I pushed with more than 200,000 load-test requests. I speak English, Mandarin, and Japanese.",
 ];
 
-export const education = [
+export const education: Education[] = [
   {
     degree: "M.S. Computer Science",
     school: "Northeastern University (Seattle)",
@@ -28,7 +30,7 @@ export const education = [
   },
 ];
 
-export const experience = [
+export const experience: Job[] = [
   {
     role: "Software Engineer Intern",
     company: "QuickImmi Inc",
@@ -53,7 +55,7 @@ export const experience = [
   },
 ];
 
-export const projects = [
+export const projects: Project[] = [
   {
     name: "ChessGPT",
     summary: "A chess agent that runs on local LLMs through Ollama.",
@@ -88,7 +90,7 @@ export const projects = [
   },
 ];
 
-export const skills = [
+export const skills: SkillGroup[] = [
   { group: "Languages", items: ["Java", "Python", "JavaScript", "TypeScript", "SQL"] },
   { group: "Web & backend", items: ["React", "Tomcat", "RabbitMQ"] },
   { group: "Cloud", items: ["AWS EC2", "AWS S3", "AWS RDS", "AWS Cognito"] },
@@ -96,7 +98,7 @@ export const skills = [
   { group: "Tools", items: ["Git"] },
 ];
 
-export const contact = {
+export const contact: Contact = {
   intro: "I'm looking for my next role and open to relocation. The best way to reach me is email.",
   links: [
     {
