@@ -38,6 +38,7 @@ TODO:
 
 - Add the resume at `public/resume.pdf`. The **Download resume** button returns a 404 until then.
 - Deploy to Vercel. The default Next.js settings work with no extra configuration.
+- Once the site has a custom domain, set `NEXT_PUBLIC_SITE_URL` (e.g. `https://example.com`) in Vercel. Link previews, the canonical URL, `robots.txt`, and the sitemap use it. Until then they use Vercel's production URL.
 
 ## Roadmap
 
